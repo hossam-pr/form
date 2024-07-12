@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="FR-MA">
+    <head>
+        <title>Formule des grandes e&#768coles</title>
+        <link rel="icon" type="x-icon" href="favicon.png" >
+        <meta name="viewport" content="width=device-width , initial-scale=1.0"> <!-- viewport is used to let our document resize itself in each screen -->
+        <meta name="author" content="EL HAMDI Hossam">
+        <meta name="description" content="this web page is a form that make users input ther data"> <!-- a small description for this web page -->
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Montserrat">
+    </head>
+
+    <body style="size: 100%;">
+        <header class="head_form">Formulaire</header>
+        <aside>Remplissez ce formulaire avec vos informations personnelles.
+        <br><span class="note">Note</span> : les cases avec (*) veut dire que c'est obligatoire à remplir
+        </aside>
+
+        <form action="action_page.php" target="_blank" method="post" autocomplete="on">
+            <div>
+            <label for="fname">Pre&#769nom<sup class="required_sign">*</sup></label><br>
+            <input type="text" id="fname" name="fname" placeholder="Entrer votre prénom" required><br>
+            <label for="lname">Nom<sup class="required_sign">*</sup></label><br>
+            <input type="text" id="lname" name="lname" placeholder="Entrer votre nom" required>
+            </div>
+
+            <div>
+            <label for="an_bac">L'année d'obtention du BAC est : </label>
+            <select name="année du bac" id="an_bac">
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024" selected>2024</option>
+            </select>
+            </div>
+
+            <div>
+            <legend class="titre">Type du BAC :<sup class="required_sign">*</sup></legend>
+            <input type="radio" id="spc" name="filière" value="BAC Sciences physiques" required>
+            <label for="spc">BAC Sciences physiques</label><br>
+            <input type="radio" id="ssvt" name="filière" value="BAC Sciences de la vie et de la terre">
+            <label for="ssvt">BAC Sciences de la vie et de la terre</label><br>
+            <input type="radio" id="sm" name="filière" value="BAC Sciences mathématiques A/B">
+            <label for="sm">BAC Sciences mathématiques A/B</label><br>
+            <input type="radio" id="autre" name="filière" value="Autres">
+            <label for="autre">Autres</label>
+            </div>
+
+            <div>
+            <legend class="titre">Choisir votre école :</legend>
+            <input type="checkbox" id="ENSAM"  name="Ecole" value="ENSAM">
+            <label for="ENSAM" title="Ecole nationale supérieure d'art et métiers">ENSAM</label><br>
+            <input type="checkbox" id="ENSA" name="Ecole" value="ENSA">
+            <label for="ENSA" title="Ecole nationale des sciences appliquées">ENSA</label><br>
+            <input type="checkbox" id="ENCG" name="Ecole" value="ENCG">
+            <label for="ENCG" title="Ecole nationale de commerce et de gestion">ENCG</label><br>
+            <input type="checkbox" id="FST" name="Ecole" value="FST">
+            <label for="FST" title="Faculté des sciences et techniques">FST</label><br>
+            <input type="checkbox" name="Ecole" id="EST" value="EST">
+            <label for="EST" title="Ecole supérieure de technologies">EST</label><br>
+            <input type="checkbox" id="ISPITS" name="Ecole" value="ISPITS">
+            <label for="ISPITS" title="Institut spécialisée des professions infirmières et techniques de santé">ISPITS</label><br>
+            <input type="checkbox" id="ENS" name="Ecole" value="ENS">
+            <label for="ENS" title="Ecole normale supérieure">ENS</label><br>
+            <input type="checkbox" id="FMP/FMD" name="Ecole" value="FMD/FMD">
+            <label for="FMD/FMD">FMD/FMD</label><br>
+            <input type="checkbox" id="autre2" value="Autre" name="Ecole">
+            <label for="autre2">Autres</label>
+
+            </div>
+            <div>
+            <fieldset>
+                <legend class="titre">Autre</legend>
+                <input type="text" name="Autre" list="autres_ecoles" placeholder="Autre école (CPGE ,APESA, ...)" size="30px" class="autre">
+                <datalist>
+                    <option value="APESA">
+                    <option value="ENA">
+                </datalist>
+    
+            </fieldset>
+            </div>
+        
+            <div>
+            <label for="age">Age<sup class="required_sign">*</sup></label><br>
+            <input type="text" id="age" name="age" placeholder="Votre age"><br>
+            <label for="email">E-mail<sup class="required_sign">*</sup></label><br>
+            <input type="email" name="email" id="email" placeholder="Taper votre personnel  email ici"><br>
+            <label for="phone">Téléphone<sup class="required_sign">*</sup></label><br>
+            <input type="tel" name="phone" id="phone" value="06" onfocus="moveCursorToEnd(this)"><br>
+            <label for="date">Date de naissance<sup class="required_sign">*</sup></label><br>
+            <input type="date" id="date" name="date">
+            </div>
+            <div id="button">
+                <input type="submit" value="Valider" class="buttons" >
+                <input type="reset" value="Effacer" class="buttons">
+            </div>
+
+
+
+        </form>
+
+        <script>
+            function moveCursorToEnd(el) {
+                // Move the cursor to the end of the input field
+                el.selectionStart = el.selectionEnd = el.value.length;
+            }
+        </script>
+
+
+
+
+        <footer></footer>
+    </body>
+</html>
